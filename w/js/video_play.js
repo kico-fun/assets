@@ -39,9 +39,9 @@ $('.open-video').click(function(){
     }
 
 
-    if (type=='douyin'||type=='toutiao'){
-        //popup('/api/play?id='+id,videoWidth,videoHeight);
-        //return false;
+    if (type=='toutiao'){
+        popup('/api/play?id='+id,videoWidth,videoHeight);
+        return false;
     }
     var player = videojs('my-video', {
         autoplay: 'muted',
@@ -68,3 +68,8 @@ $('#video-modal').on('hidden.bs.modal', function (e) {
         player.pause();
     });
 })
+function popup(url,width,height){
+    var top = (window.screen.height-30-height)/2;       //获得窗口的垂直位置;
+    var left = (window.screen.width-10-width)/2;        //获得窗口的水平位置;
+    window.open(url,'video','height='+height+',,innerHeight='+height+',width='+width+',innerWidth='+width+',top='+top+',left='+left+',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
+}
