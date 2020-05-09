@@ -73,3 +73,7 @@ function popup(url,width,height){
     var left = (window.screen.width-10-width)/2;        //获得窗口的水平位置;
     window.open(url,'video','height='+height+',,innerHeight='+height+',width='+width+',innerWidth='+width+',top='+top+',left='+left+',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
 }
+function popPlay(id){
+    popup('/api/play?id='+id,videoWidth,videoHeight);
+    return false;
+}
