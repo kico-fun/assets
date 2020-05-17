@@ -37,7 +37,7 @@ $('.open-video').click(function(){
     }
 
 
-    if (type=='toutiao'){
+    if (type=='toutiao'||type=='douyin'){
         popup('/api/play?id='+id,videoWidth,videoHeight);
         return false;
     }
