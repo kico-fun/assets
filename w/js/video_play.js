@@ -37,10 +37,10 @@ $('.open-video').click(function(){
     }
 
 
-    if (type=='toutiao'||type=='douyin'){
+    //if (type=='toutiao'||type=='douyin'){
         popup('/api/play?id='+id,videoWidth,videoHeight);
         return false;
-    }
+    //}
     var player = videojs('my-video', {
         autoplay: 'muted',
         poster:poster,
