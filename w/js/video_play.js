@@ -41,12 +41,12 @@ $('.open-video').click(function(){
         popup('/api/play?id='+id,videoWidth,videoHeight);
         return false;
     //}
-    var player = videojs('my-video', {
+    /*var player = videojs('my-video', {
         autoplay: 'muted',
         poster:poster,
         height:videoHeight,
         width:videoWidth
-    });
+    });*/
 });
 $('#video-modal').on('shown.bs.modal', function (e) {
     var target = $(e.relatedTarget);
